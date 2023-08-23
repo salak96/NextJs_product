@@ -1,22 +1,26 @@
 # Installasi Next JS
 
-## Untuk menginstal versi terakhir
-- `npx create-next-app@latest`
+# Untuk menginstal versi terakhir
+ ```bash
+ npx create-next-app@latest
+ ```
 
 ## Untuk Menginstal Sesuai versi 13 misalnya
 
-- `npx create-next-app@13.4.7`
+ ```bash
+ npx create-next-app@13.4.7
+ ```
 
 # Selanjutnya sesuai kebutuhan
 -  Next saja atau Tab
 
 # contoh
-```
-- `npx create-next-app@13.4.7 `
+```bash
+npx create-next-app@13.4.7 
 ```
 # Need to install the following packages:
-- create-next-app@13.4.7
-```
+-create-next-app@13.4.7
+```bash
 Ok to proceed? (y) y
 √ What is your project named? ... my-app
 √ Would you like to use TypeScript with this project? ... No / Yes  (YES)
@@ -31,17 +35,19 @@ Using npm.
 ```
 
 ## You can update by running
-- `npm i -g create-next-app`
+```bash
+npm i -g create-next-app
+```
 
 ## Formatter pritter code
 
-```
+```bash
 npm install --save-dev --save-exact prettier
 ```
 
 ## Buat folder di root
 
-```
+```bash
 touch .prettierrc.json
 ```
 atau
@@ -66,7 +72,7 @@ atau
 
 - command di terminal
 
-```
+```bash
 npx prettier --write . 
 ```
 
@@ -78,7 +84,7 @@ npx prettier --write .
 
 - untuk menjalankan di terminal
 
-```
+```bash
 npm run format
 ```
 ## Getting Started
