@@ -119,7 +119,7 @@ npm i -D tailwindcss postcss autoprefixer
 npx tailwindcss init -p
 
 ```
-- Configuring Tailwind
+- Configuring Tailwind to styles globas.css
 ```
 /** @type {import('tailwindcss').Config} */
 module.exports = {
