@@ -108,7 +108,7 @@ npm i --save-dev sass
     }
 ```
 
-## Install TailWinds Css
+## Install Tailwind Css
 ```bash
 npm i -D tailwindcss postcss autoprefixer
 ```
