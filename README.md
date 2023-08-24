@@ -97,6 +97,52 @@ npx prettier --write .
 npm run format
 ```
 
+## Instal SaSS Css
+```bash
+npm i --save-dev sass
+```
+- Akan, masuk package json
+```
+  "devDependencies": {
+        "sass": "^1.66.1"
+    }
+```
+
+## Install TailWinds Css
+```bash
+npm i -D tailwindcss postcss autoprefixer
+```
+
+- Install update
+
+```bash
+npx tailwindcss init -p
+
+```
+- Configuring Tailwind
+```
+/** @type {import('tailwindcss').Config} */
+module.exports = {
+  content: [
+    './app/**/*.{js,ts,jsx,tsx,mdx}', // Note the addition of the `app` directory.
+    './pages/**/*.{js,ts,jsx,tsx,mdx}',
+    './components/**/*.{js,ts,jsx,tsx,mdx}',
+ 
+    // Or if using `src` directory:
+    './src/**/*.{js,ts,jsx,tsx,mdx}',
+  ],
+  theme: {
+    extend: {},
+  },
+  plugins: [],
+}
+```
+- Importing Styles
+```
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+```
 ## Getting Started
 
 First, run the development server:
