@@ -1,10 +1,10 @@
-@import "/src/styles/colors.scss";
+@import '/src/styles/colors.scss';
 
-.login{
-    display :flex;
+.login {
+    display: flex;
     flex-direction: column;
-    justify-content:center;
-    align-items:center;
-    height:100vh;
-    background-color:map-get($schema,'primary'); 
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: map-get($schema, 'primary');
 }

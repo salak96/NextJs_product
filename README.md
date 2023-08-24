@@ -98,10 +98,13 @@ npm run format
 ```
 
 ## Instal SaSS Css
+
 ```bash
 npm i --save-dev sass
 ```
-- Akan, masuk package json
+
+-   Akan, masuk package json
+
 ```
   "devDependencies": {
         "sass": "^1.66.1"
@@ -109,17 +112,20 @@ npm i --save-dev sass
 ```
 
 ## Install Tailwind Css
+
 ```bash
 npm i -D tailwindcss postcss autoprefixer
 ```
 
-- Install update
+-   Install update
 
 ```bash
 npx tailwindcss init -p
 
 ```
-- Configuring Tailwind to styles globas.css
+
+-   Configuring Tailwind to styles globas.css
+
 ```
 /** @type {import('tailwindcss').Config} */
 module.exports = {
@@ -127,7 +133,7 @@ module.exports = {
     './app/**/*.{js,ts,jsx,tsx,mdx}', // Note the addition of the `app` directory.
     './pages/**/*.{js,ts,jsx,tsx,mdx}',
     './components/**/*.{js,ts,jsx,tsx,mdx}',
- 
+
     // Or if using `src` directory:
     './src/**/*.{js,ts,jsx,tsx,mdx}',
   ],
@@ -137,18 +143,118 @@ module.exports = {
   plugins: [],
 }
 ```
-- Importing Styles
+
+-   Importing Styles
+
 ```
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+```
+## Firebase Set Up
+```bash
+npm install firebase
 ```
 ## Getting Started
 
 First, run the development server:
 
 ```bash
+- Buat folder dalam src nama Util/ lib
+```bash
+cd src
+```
+```bash
+mkdir utils
+```
+```bash
+mkdir lib
+```
+- Buat folder dalam Util/lib nama DB
+```bash
+ mkdir db
+```
+```bash
+mkdir firebase
+```
+- Buat file firebase.ts
+```bash
+touch fireabase.ts
+```
+- Buat file init.ts
+```bash
+touch init.ts
+```
+- Copy Project Settings
+```
+// Import the functions you need from the SDKs you need
+import { initializeApp } from "firebase/app";
+// TODO: Add SDKs for Firebase products that you want to use
+// https://firebase.google.com/docs/web/setup#available-libraries
+
+// Your web app's Firebase configuration
+const firebaseConfig = {
+  apiKey: "APIKEY",
+  authDomain: "lambang-app.firebaseapp.com",
+  projectId: "lambang-app",
+  storageBucket: "lambang-app.appspot.com",
+  messagingSenderId: "1234",
+  appId: "1:558522649003:web:0ef48054a17fb39056aaee"
+};
+
+// Initialize Firebase
+const app = initializeApp(firebaseConfig);
+```
+## Buat Env diluar
+```bash
+touch .env.local
+```
+
+- Masukan sesuai di dalam init lib/Utils Tanpa kutip '' dan koma , diakhir 
+```
+FIREBASE_API_KEY = API KEY
+FIREBASE_AUTH_DOMAIN = nextjs-1f3e5 FIREBASE_PROJECT_ID = nextjs-1f3e5
+FIREBASE_STORAGE_BUCKET =nextjs-1f3e5appspot.com
+FIREBASE_MESSAGING_SENDER_ID =
+FIREBASE_APP_ID =
+
+```
+
+- Ubah kembali init/lib dengan memanggil env.local
+```
+// Import the functions you need from the SDKs you need
+import { initializeApp } from "firebase/app";
+// TODO: Add SDKs for Firebase products that you want to use
+// https://firebase.google.com/docs/web/setup#available-libraries
+
+// Your web app's Firebase configuration
+const firebaseConfig = {
+  apiKey: process.env.FIREBASE_API_KEY,
+  authDomain: process.env.FIREBASE_AUTH_DOMAIN,
+  projectId: process.env.FIREBASE_PROJECT_ID,
+  storageBucket: process.env.FIREBASE_STORAGE_BUCKET,
+  messagingSenderId: process.env.FIREBASE_MESSAGE_SENDER_ID,
+  appId: process.env.FIREBASE_APP_ID,
+};
+
+// Initialize Firebase
+const app = initializeApp(firebaseConfig);
+export default app;
+
+```
+
+
+
+
+
+
+
+
+
+# RUNING NEXT JS
+```bash
 npm run dev
+````
 # or
 yarn dev
 # or
