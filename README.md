@@ -151,41 +151,55 @@ module.exports = {
 @tailwind components;
 @tailwind utilities;
 ```
+
 ## Firebase Set Up
+
 ```bash
 npm install firebase
 ```
+
 ## Getting Started
 
 First, run the development server:
 
-```bash
+````bash
 - Buat folder dalam src nama Util/ lib
 ```bash
 cd src
-```
+````
+
 ```bash
 mkdir utils
 ```
+
 ```bash
 mkdir lib
 ```
-- Buat folder dalam Util/lib nama DB
+
+-   Buat folder dalam Util/lib nama DB
+
 ```bash
  mkdir db
 ```
+
 ```bash
 mkdir firebase
 ```
-- Buat file firebase.ts
+
+-   Buat file firebase.ts
+
 ```bash
 touch fireabase.ts
 ```
-- Buat file init.ts
+
+-   Buat file init.ts
+
 ```bash
 touch init.ts
 ```
-- Copy Project Settings
+
+-   Copy Project Settings
+
 ```
 // Import the functions you need from the SDKs you need
 import { initializeApp } from "firebase/app";
@@ -205,12 +219,15 @@ const firebaseConfig = {
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
 ```
+
 ## Buat Env diluar
+
 ```bash
 touch .env.local
 ```
 
-- Masukan sesuai di dalam init lib/Utils Tanpa kutip '' dan koma , diakhir 
+-   Masukan sesuai di dalam init lib/Utils Tanpa kutip '' dan koma , diakhir
+
 ```
 FIREBASE_API_KEY = API KEY
 FIREBASE_AUTH_DOMAIN = nextjs-1f3e5 FIREBASE_PROJECT_ID = nextjs-1f3e5
@@ -220,7 +237,8 @@ FIREBASE_APP_ID =
 
 ```
 
-- Ubah kembali init/lib dengan memanggil env.local
+-   Ubah kembali init/lib dengan memanggil env.local
+
 ```
 // Import the functions you need from the SDKs you need
 import { initializeApp } from "firebase/app";
@@ -243,22 +261,20 @@ export default app;
 
 ```
 
-
-
-
-
-
-
-
-
 # RUNING NEXT JS
+
 ```bash
 npm run dev
-````
+```
+
 # or
+
 yarn dev
+
 # or
+
 pnpm dev
+
 ```
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
@@ -285,3 +301,4 @@ You can check out [the Next.js GitHub repository](https://github.com/vercel/next
 The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+```

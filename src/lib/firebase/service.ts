@@ -8,7 +8,7 @@ export async function retrieveData(collectionName: string) {
 
     const data = querySnapshot.docs.map((doc) => ({
         id: doc.id,
-        ...doc.data()
+        ...doc.data(),
     }));
 
     return data; // Moved this line inside the function
